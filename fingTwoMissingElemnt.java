@@ -13,7 +13,7 @@ class fingTwoMissingElemnt {
             xor ^= i;
         }
 
-        int y = xor & (-xor);
+        int y = xor & (-xor);// different bit
 
         int x1 = 0;
         int x2 = 0;
