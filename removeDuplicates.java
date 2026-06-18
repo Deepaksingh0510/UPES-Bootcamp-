@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 class removeDuplicates {
@@ -19,9 +18,15 @@ class removeDuplicates {
         System.out.println("");
 
         System.out.println("New array ");
-        
+
+        int res[]=new int[hs.size()];
+        int i=0;
         for (int x : hs) {
-            System.out.print(+x + " ");
+            res[i++]=x;
+        }
+
+        for(int x:res){
+            System.out.print(x+" ");
         }
     }
 
