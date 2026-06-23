@@ -13,7 +13,7 @@ class fingTwoMissingElemnt {
             xor ^= i;
         }
 
-        int y = xor & (-xor);// different bit
+        int y = xor & (-xor);      // different bit
 
         int x1 = 0;
         int x2 = 0;
@@ -34,7 +34,7 @@ class fingTwoMissingElemnt {
             }
         }
 
-        System.out.print("Missing no: "+ x1 + " "+ x2);
+        System.out.print("Missing no: " + x1 + " " + x2);
     }
 
     public static void main(String args[]) {

@@ -12,7 +12,7 @@ class targetSum {
     //         }
     //     }
     // }
-    // void find(int arr[],int target){
+    // void find(int arr[],int target){ 
     //     int i=arr[0];
     //     int j=arr[arr.length-1];
     //     while(i!=j){
