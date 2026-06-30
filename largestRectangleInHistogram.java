@@ -6,7 +6,7 @@ class largestRectangleInHistogram {
         int left[]=new int[n];
         Arrays.fill(left,-1);
         for(int i=n-1;i>=0;i--){
-            while(!s.isEmpty() && heights[i]<=heights[s.peek()]){
+            while(!s.isEmpty() && heights[i]<heights[s.peek()]){
                 int out=s.pop();
                 left[out]=i;
             }
@@ -17,7 +17,7 @@ class largestRectangleInHistogram {
         int right[]=new int[n];
         Arrays.fill(right,n);
         for(int i=0;i<n;i++){
-            while(!s.isEmpty() && heights[i]<=heights[s.peek()]){
+            while(!s.isEmpty() && heights[i]<heights[s.peek()]){
                 int out=s.pop();
                 right[out]=i;
             }
