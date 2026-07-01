@@ -31,9 +31,7 @@ class sortcolors{
         s.sort(arr);
 
         for(int x:arr){
-            System.out.print(x+" ");
+            System.out.print(x+",");
         }
-
-
     }
 }
