@@ -63,18 +63,14 @@ class Solution {
         Node slow = dummy;
         Node fast = dummy;
 
-        // Move fast k+1 steps ahead
         for (int i = 0; i <= k; i++) {
             fast = fast.next;
         }
 
-        // Move both pointers
         while (fast != null) {
             slow = slow.next;
             fast = fast.next;
         }
-
-        // Delete the node
         slow.next = slow.next.next;
 
         return dummy.next;
@@ -101,7 +97,7 @@ public class removeElementFromEnd {
         Solution s = new Solution();
 
         l.head = s.remove(l.head, k);
-
+    
         System.out.println("After Removing:");
         l.show();
     }
