@@ -34,6 +34,18 @@ class LinkedList {
         }
     }
 
+    void delete(int x){
+        Node itr=head;
+
+        while(itr!=null && itr.next!=null){
+            if(itr.next.value==x){
+                itr.next=itr.next.next;
+            }
+            itr=itr.next;
+        }
+
+    }
+
     void show() {
         Node itr = head;
 
@@ -51,6 +63,9 @@ class mainLL {
         l.add(1);
         l.add(2);
         l.add(3);
+        l.show();
+        System.out.println();
+        l.delete(2);
         l.show();
     }
 }
