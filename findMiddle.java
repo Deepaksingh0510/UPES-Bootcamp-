@@ -71,10 +71,32 @@ class Solution{
 
         while(fast!=null && fast.next!=null){
             slow=slow.next;
-            fast.next=slow.next.next;
+            fast.next=fast.next.next;
         }
 
         return slow;
+    }
+
+
+    //without fast and slow method
+    Node find(Node head){
+        Node itr=head;
+        int count=0;
+
+        while(itr!=null){
+            count++;
+            itr=itr.next;
+        }
+        itr=head;
+
+        for(int i=0;i<count/2;i++){
+            itr=itr.next;
+        }
+        return itr;
+
+
+
+        
     }
 }
 
@@ -87,11 +109,12 @@ class  findMiddle{
         l.add(3);
         l.add(4);
         l.add(5);
+        l.add(6);
         l.show();
 
         System.out.println();
         Solution s=new Solution();
-        Node middle=s.findM(l.head);
+        Node middle=s.find(l.head);
         System.out.println(middle.value);
     }
 }
