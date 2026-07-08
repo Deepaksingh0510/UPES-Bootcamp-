@@ -1,6 +1,6 @@
 import java.util.*;
 
-class countOne {
+class countOne{
 
     void count(int n) {
         int count = 0;

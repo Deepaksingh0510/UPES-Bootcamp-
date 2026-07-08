@@ -96,7 +96,7 @@ class findKFromLast{
         l.show();
         System.out.println();
         
-        int k=2;
+        int k=3;
         Solution s=new Solution();
         Node FindK=s.find(l.head,k);
         System.out.println(FindK.value);

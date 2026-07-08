@@ -45,7 +45,7 @@ class checkParenthesis{
 
     }
     public static void main(String args[]){
-        String s="()()";
+        String s=")(";
         checkParenthesis c=new checkParenthesis();
         System.out.print(c.check(s));
         System.out.println();

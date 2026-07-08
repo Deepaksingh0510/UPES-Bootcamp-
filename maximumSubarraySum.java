@@ -13,7 +13,9 @@ class maximumSubArraySum {
     //     }
     //     System.out.println(max);
     // }
-    // OPTIMIZED    
+
+
+    // OPTIMIZED    "Kadanes algorithm"
     void findSubArray(int arr[]) {
         int fb = 0;
         int mw = Integer.MIN_VALUE;

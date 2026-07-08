@@ -34,7 +34,9 @@ class LinkedList {
         }
     }
 
-    void delete(int x){
+
+    //deletion by value
+    void deleteVal(int x){
         Node itr=head;
 
         while(itr!=null && itr.next!=null){
@@ -43,6 +45,12 @@ class LinkedList {
             }
             itr=itr.next;
         }
+
+    }
+    //deletion by Node
+    void deleteVal(Node n){
+        n.value=n.next.value;
+        n.next=n.next.next;
 
     }
 
@@ -65,7 +73,7 @@ class mainLL {
         l.add(3);
         l.show();
         System.out.println();
-        l.delete(2);
+        l.deleteVal(2);
         l.show();
     }
 }

@@ -31,14 +31,16 @@ class nextGreatarElement {
         Arrays.fill(ans, 0);
 
         for (int s = 0; s < n; s++) {
-            while (!PG.isEmpty() && arr[s] > arr[PG.peek()]) {
+            while (!PG.isEmpty() && arr[s] > arr[PG.peek()]){
                 int out = PG.pop();
                 ans[out] = arr[s];
+
+
+                
             }
 
             PG.push(s);
         }
-
         return ans;
 
     }

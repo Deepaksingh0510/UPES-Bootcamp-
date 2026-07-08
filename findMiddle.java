@@ -65,17 +65,36 @@ class LinkedList {
 }
 
 class Solution{
-    Node findM(Node head){
+    Node findSM(Node head){ // gives second middle for even length of the LL 
         Node slow=head;
         Node fast=head;
 
         while(fast!=null && fast.next!=null){
             slow=slow.next;
-            fast.next=fast.next.next;
+            fast=fast.next.next;
+            //OR
+            fast=fast.next.next;
+            slow=slow.next;
         }
 
         return slow;
     }
+
+
+    Node findFM(Node head){ // gives First middle for even length of the LL 
+        Node slow=head;
+        Node fast=head;
+
+        while(fast!=null && fast.next.next!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+            
+        }
+
+        return slow;
+    }
+
+    
 
 
     //without fast and slow method
@@ -94,9 +113,6 @@ class Solution{
         }
         return itr;
 
-
-
-        
     }
 }
 
@@ -114,7 +130,7 @@ class  findMiddle{
 
         System.out.println();
         Solution s=new Solution();
-        Node middle=s.find(l.head);
+        Node middle=s.findFM(l.head);
         System.out.println(middle.value);
     }
 }
