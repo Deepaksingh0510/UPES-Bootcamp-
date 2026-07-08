@@ -1,4 +1,6 @@
 
+
+
 class Node {
 
     int value;
@@ -66,6 +68,8 @@ class LinkedList {
 
 
 class Solution{
+
+    //Traditional method 
     Node find(Node head,int k){
         Node itr=head;
         int count=0;
@@ -80,6 +84,24 @@ class Solution{
             itr=itr.next;
         }
         return itr;
+
+    }
+
+
+    Node findk(Node head,int k){
+        Node slow=head;
+        Node fast=head;
+
+        while(k!=0){
+            fast=fast.next;
+            k--;
+        }
+
+        while(fast!=null ) {
+            fast=fast.next;
+            slow=slow.next;
+        }
+        return slow;
 
     }
 }
@@ -98,7 +120,7 @@ class findKFromLast{
         
         int k=3;
         Solution s=new Solution();
-        Node FindK=s.find(l.head,k);
+        Node FindK=s.findk(l.head,k);
         System.out.println(FindK.value);
     }
 }
