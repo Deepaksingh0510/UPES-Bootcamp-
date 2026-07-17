@@ -1,9 +1,14 @@
 class subsetSum{
     boolean isSubsetSum(int coins[],int sum){
-        return helper(0, coins, sum);
+
+        int [][]dp=new int[coins.length+1][sum+1];
+        for(int []x:coins){
+            Arrays.fill(x,-1);
+        }
+        return helper(0, coins, sum,dp);
     }
 
-    boolean helper(int i,int coins[],int sum){
+    boolean helper(int i,int coins[],int sum,int dp[][]){
         if(sum==0){
             return true;
         }
@@ -11,11 +16,22 @@ class subsetSum{
             return false;
         }
 
+        if(dp[i][sum]!=-1){
+            return dp[i][sum]==1;
+        }
+
         boolean take=false;
         if(coins[i]<=sum){
-            take=helper(i+1,coins,sum-coins[i]);
+            take=helper(i+1,coins,sum-coins[i],dp);
         }
-        boolean notTake=helper(i+1,coins,sum);
+        boolean notTake=helper(i+1,coins,sum,dp);
+
+        if(take || notTake){
+            dp[i][sum]=1;
+        }else{
+            dp[i][sum]=0;
+
+        }
 
         return take || notTake;
     }
