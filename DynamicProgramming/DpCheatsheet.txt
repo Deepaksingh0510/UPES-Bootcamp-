@@ -1,7 +1,7 @@
 Take/Not Take approach works on combinations, not permutations.
 
-Combination:
+Combination:    Order does NOT matter.
 - {1, 2} and {2, 1} are considered the same combination, so they are counted only once.
 
-Permutation:
+Permutation:    Order matters.
 - {1, 2} and {2, 1} are considered different because the order matters, so they are counted separately.
