@@ -1,8 +1,9 @@
+import java.util.Arrays;
 class subsetSum{
     boolean isSubsetSum(int coins[],int sum){
 
         int [][]dp=new int[coins.length+1][sum+1];
-        for(int []x:coins){
+        for(int []x:dp){
             Arrays.fill(x,-1);
         }
         return helper(0, coins, sum,dp);
