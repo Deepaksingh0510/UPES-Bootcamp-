@@ -1,3 +1,7 @@
-take not take approach works on combination not permutataion
-combination:
-if there is 1 , 2 and 2, 1 re there here it is taken as One but in permutataion it is taken as 2 
+Take/Not Take approach works on combinations, not permutations.
+
+Combination:
+- {1, 2} and {2, 1} are considered the same combination, so they are counted only once.
+
+Permutation:
+- {1, 2} and {2, 1} are considered different because the order matters, so they are counted separately.
