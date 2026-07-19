@@ -1,12 +1,12 @@
-class Solution{
+class  Solution{
 
     void print(int n){
         if(n==1){
-            System.out.println(n);
+            System.out.print(n);
             return;
         }
         print(n-1);
-        System.out.println(n);
+        System.out.print(n);
     }
 }
 public class print1ToN {
