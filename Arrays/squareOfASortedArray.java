@@ -1,27 +1,34 @@
+import java.util.*;
 public class squareOfASortedArray {
     
     int[] soln(int[] num){
         int s=num.length;
         int ans[]=new int[s];
 
-        int left=0;
-        int right=s-1;
-        int index=s-1;
+        // int left=0;
+        // int right=s-1;
+        // int index=s-1;
 
-        while(left<right){
-            int ls=num[left]*num[left];
-            int rs=num[right]*num[right];
+        // while(left<right){
+        //     int ls=num[left]*num[left];
+        //     int rs=num[right]*num[right];
 
-            if(ls>rs){
-                ans[index]=ls;
-                left++;
-            }else{
-                ans[index]=rs;
-                right--;
-            }
+        //     if(ls>rs){
+        //         ans[index]=ls;
+        //         left++;
+        //     }else{
+        //         ans[index]=rs;
+        //         right--;
+        //     }
 
-            index--;
+        //     index--;
+        // }
+        
+        for(int i=0;i<s;i++){
+            ans[i]=num[i]*num[i];
         }
+
+        Arrays.sort(ans);
 
         return ans;
     } 
