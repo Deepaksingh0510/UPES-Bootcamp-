@@ -10,6 +10,7 @@ public class transposeMatrix {
                 ans[j][i]=arr[i][j];
             }
         }
+        
         return ans;
     }
 
